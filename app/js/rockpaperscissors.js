@@ -22,11 +22,15 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-	var move = 1;
+	var move = Math.random();
 	if (move = 1) {
-	return "You have moved one space";
+	return "Rock";
 	}
-	else if (move > 1 || move = 0) {
+	else if (move = 2) {
+	return "Paper"; }
+	else if (move = 3) {
+	return "Scissors"}
+	else if (move > 3 || move = 0) {
 	return 'getInput()';}
 	}
     // Write an expression that operates on a variable called `move`
@@ -36,20 +40,51 @@ function getPlayerMove(move) {
 }
 
 function getComputerMove(move) {
-	var move = 1;
+	var move = Math.random();
 	if (move = 1) {
-	return "You have moved one space";
+	return "Rock";
 	}
-	else if (move > 1 || move = 0) {
+	else if (move = 2) {
+	return "Paper"; }
+	else if (move = 3) {
+	return "Scissors"}
+	else if (move > 3 || move = 0) {
 	return 'randomPlay()';}
+	}
     // Write an expression that operates on a variable called `move`
     // If a `move` has a value, your expression should evaluate to that value.
     // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    
 }
 
 function getWinner(playerMove,computerMove) {
-    var winner;
+    if (PlayerMove.equals(ComputerMove)) {
+	System.out.println("It's a tie!");
+    }
+	else if (playerMove.equals("Rock")){
+	if (computerMove.equals("Scissor"))
+	return playerWins;
+}
+	else if (playerMove.equals("Paper")){
+	if (computerMove.equals("Scissor"))
+	return computerWins;
+}
+else if (playerMove.equals("Scissor")){
+	if (computerMove.equals("Paper"))
+	return playerWins;
+}
+else if (playerMove.equals("Rock")){
+	if (computerMove.equals("Paper"))
+	return computerWins;
+}
+else if (playerMove.equals("Paper")){
+	if (computerMove.equals("Rock"))
+	return playerWins;
+}
+else if (playerMove.equals("Scissors")){
+	if (computerMove.equals("Rock"))
+	return computerWins;
+}
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
