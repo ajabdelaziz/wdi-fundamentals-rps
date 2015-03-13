@@ -100,4 +100,16 @@ function playToFive() {
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
 }
+ while (playerWins < 5 && computerWins < 5) {
++ var playerMove = getPlayerMove();
++ var computerMove = getComputerMove();
++ var winner = getWinner(playerMove, computerMove);
++ if (winner === 'player') {playerWins++}
++ else {computerWins++}
++ console.log("Player played " + playerMove + " and Computer played " + computerMove);
++ console.log("The score is currently " + playerWins + " - " + computerWins);
+ return [playerWins, computerWins];
+}
+
+
 
